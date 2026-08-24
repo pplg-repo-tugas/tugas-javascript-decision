@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Input angka -->
+    <input type="number" id="numberSatu" placeholder="Masukkan Angka Pertama">
+    <input type="number" id="numberDua" placeholder="Masukkan Angka Kedua">
+
+    <button onclick="kalkulatorButton('+')">(+)</button>
+    <button onclick="kalkulatorButton('-')">(-)</button>
+    <button onclick="kalkulatorButton('*')">(x)</button>
+    <button onclick="kalkulatorButton('/')">(:)</button>
+    <p id="hasilText"></p>
+
+    <script>
+        function switchCaseKegiatan() {
+            let activity = "Dirumah";
+            switch (activity) {
+                case "Dirumah":
+                    document.writeln("Aku bersantai saat hari libur");
+                    break;
+                case "Belaar di rumah":
+                    document.writeln("Aku belajar di rumah saat hari libur");
+                    break;
+                case "Main game":
+                    document.writeln("Aku bermain game saat hari libur");
+                    break;
+            }
+        }
+            function kalkulatorButton(operator) {
+    let bilSatu = Number(document.getElementById("numberSatu").value);
+    let bilDua = Number(document.getElementById("numberDua").value);
+    let proses;
+
+    switch (operator) {
+        case '+':
+            proses = bilSatu + bilDua;
+            break;
+
+        case '-':
+            proses = bilSatu - bilDua;
+            break;
+
+        case '*':
+            proses = bilSatu * bilDua;
+            break;
+
+        case '/':
+            proses = bilSatu / bilDua;
+            break;
+
+        default:
+            proses = "Operator tidak valid";
+    }
+
+             console.log(proses);
+             document.getElementById("hasilText").innerText = "Hasilnya adalah " + proses;
+}
+
+         switchCaseKegiatan();
+         document.write("<br/>");
+         kalkulatorButton();
+         document.write("<br/>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numOne" placeholder="Masukkan Angka"/>
+    <input type="number" id="numTwo" placeholder="Masukkan Angka"/>
+
+    <button onclick="kalkulatorButton('*')">Hitung</button>
+    <p id="hasilText">`</p>
+    <script>
+        function switchCaseKegiatan () {
+            let activity = "Olahraga"
+            document.writeln("Kegiatan hari ini: " +activity+ "<br/>")
+            
+            switch (activity){
+                case "Sarapan": document.writeln("Sarapan pada Pukul 06.45 - 07.30")
+                break;
+                case "Makan siang": document.writeln("Makan siang pada Pukul 12.30")
+                break;
+                case "Olahraga": document.writeln("Olahraga pada Pukul 15.00 - 17.00")
+                break;
+            }
+        }
+        
+        function kalkulatorButton(operator){
+            let bilSatu = Number(document.getElementById("numOne").value);
+            let bilDua = Number(document.getElementById("numTwo").value);
+            let proses
+            console.log(proses);
+
+            switch(operator){
+                case '+': 
+                proses = bilSatu + bilDua
+                document.writeln("hasil pertambahan adalah " +proses) 
+                break;
+                case '*': 
+                proses = bilSatu * bilDua
+                document.writeln("hasil perkalian adalah " +proses) 
+                break;
+            }
+        }
+        document.getElementById("hasilText").innerText = proses
+
+
+        switchCaseKegiatan (); 
+        document.writeln("<br/>")
+        kalkulatorButton ();
+    </script>
+</body>
+</html>

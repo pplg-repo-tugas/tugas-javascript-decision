@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkaluator</title>
+</head>
+<body>
+    <input type="number" id="number1" placeholder="Masukkan angka">
+    <input type="number" id="number2" placeholder="Masukkan angka"><br>
+    <button onclick="Kalkulatorbutton('+')">(+)</button>
+    <button onclick="Kalkulatorbutton('-')">(-)</button>
+    <button onclick="Kalkulatorbutton('x')">(x)</button>
+    <button onclick="Kalkulatorbutton('/')">(:)</button>
+    <p id="hasilText"> -</p>
+    <script>
+        function Kalkulatorbutton(Operator) {
+            let angkapertama = Number(document.getElementById('number1').value);
+            let angkakedua = Number(document.getElementById('number2').value);
+            let proses;
+
+              switch (Operator) {
+                case '+':
+                proses = angkapertama + angkakedua;
+                document.writeln(`Hasil dari ${angkapertama} ${Operator} ${angkakedua} = ${proses} <br>`)
+                break;
+                case '-':
+                proses = angkapertama - angkakedua;
+                document.writeln(`Hasil dari ${angkapertama} ${Operator} ${angkakedua} = ${proses} <br>`)
+                break;
+                case 'x':
+                proses = angkapertama * angkakedua;
+                document.writeln(`Hasil dari ${angkapertama} ${Operator} ${angkakedua} = ${proses} <br>`)
+                break;
+                case '/':
+                proses = angkapertama / angkakedua;
+                document.writeln(`Hasil dari ${angkapertama} ${Operator} ${angkakedua} = ${proses} <br>`)
+                break;
+            }
+        }
+        document.getElementById("hasilText").innerText = proses;
+        Kalkulatorbutton()
+    </script>
+</body>
+</html>

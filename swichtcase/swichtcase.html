@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numone" placeholder="Masukkan Angka"/>
+    <input type="number" id="numTwo" placeholder="Masukkan Angka"/>
+    <script>
+        
+        function switchCaseKegiatan () {
+        let activity = "Dirumah"
+        switch(activity){
+                case "Upacara Bendera":
+                document.writeln("Hari Senin Pukul 06:30 sampai dengan 08:00")
+                break;
+                case "Learning":
+                document.writeln("pukul 06:30 sampai dengan 15:00")
+                break;
+                case "pulang ke rumah":
+                document.writeln("Pukul 15:05")
+                break;
+            }
+        }   
+        function kalkulator(){
+            let bilSatu = 2
+            let bilDua = 2
+            let pilihOperator = '*';
+            let hasil;
+            switch(pilihOperator){
+                case '+':
+                    hasil = bilSatu + bilDua;
+                    document.writeln("Hasil=== Penambahan "+hasil)
+                    console.log(hasil)
+                break;
+                case '*':
+                    hasil = bilSatu * bilDua;
+                    document.writeln("Hasil kali " +hasil)
+                break;
+
+
+
+            }
+        }
+        function kalkulatorButton(operator){
+            let bilSatu = Number (document.getElementById("numberSatu").value);
+            let bilDua = Number (document.getElementById("numberDua").value);
+            let proses = bilSatu + bilDua;
+            console.log(proses);
+
+            switch(operator){
+                case '+':
+                    document.writeln('Tambah ' ,'hasilnya adalah ',proses)
+                    break;
+                    case '*':
+                    document.writeln("kali" +proses)
+                    break;
+            }
+        }
+
+
+
+
+        document.getElementById("hasiltext").innertext = proses;
+
+        switchCaseKegiatan();
+        document.write("<br/>")
+        kalkulator();
+        document.write("<br/>")
+        kalkulatorButton();
+    </script>
+</body>
+</html>                 

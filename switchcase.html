@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+<body>
+    <input type="number" id="numberSatu" placeholder="Angka Pertama">
+     <input type="number" id="numberDua" placeholder="Angka Kedua">
+
+     <button onclick="kalkulatorButton('*')">Tambah (+)</button>
+     <p id="hasilText"> -</p>
+    <script>
+        function switchCaseKegiatan(){
+            let activity = "Learning"
+        switch(activity){
+            case "Upacara":
+            document.writeln("Hari senin dari pukul 06.30 sampai pukul 08.00")
+            break;
+            case "Learning":
+            document.writeln("Pukul 08.00 sampai pukul 15.00")
+            break;
+            case "Pulang":
+            document.writeln("Pukul 15.00 pulang ke rumah masing masing")
+            break;
+        }
+    }
+        function kalkulator(){
+            let bilSatu = 2
+            let bilDua = 2
+            let pilihOperator = '*';
+            let hasil;
+            switch(pilihOperator){
+                case '+' :
+                    hasil = bilSatu + bilDua;
+                    document.writeln("Hasil=== Penambahan "+hasil)
+                    console.log
+                break;
+                case '*':
+                    hasil = bilSatu * bilDua
+                    document.writeln("Hasil Kali " +hasil)
+                    break;
+            }
+        }
+        document.getElementById("hasilText").innerText = proses;
+
+        switchCaseKegiatan();
+        document.write("br/>")
+        kalkulator();
+        document.write("br/>")
+        kalkulatorButton();
+    </script>
+</body>
+</html>

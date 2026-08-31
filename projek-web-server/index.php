@@ -1,13 +1,10 @@
 <?php
-
-$namakelas = "XI PPLG-2";
-$bilanganSatu = 1;
-$bilanganDua = 3;
-$hitung = $bilanganSatu + $bilanganDua;
-echo "halo orang!";
+$namaSaya = "Ghazy";
+$bilangansatu = 1;
+$bilangandua = 2;
+$hitung = $bilangansatu + $bilangandua;
+echo "halo orang";
 echo "<br/>";
-echo $namakelas;
+echo $namaSaya;
 echo "<br/>";
 echo $hitung;
-
-?>

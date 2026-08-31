@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.32-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: pandaya_kelas_pplg2
+-- Host: localhost    Database: murid_pplg
 -- ------------------------------------------------------
 -- Server version	10.4.32-MariaDB
 
@@ -23,12 +23,12 @@ DROP TABLE IF EXISTS `biodata_siswa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `biodata_siswa` (
-  `id` int(20) NOT NULL,
-  `nama` varchar(30) NOT NULL,
-  `tempat_tgl_lahir` varchar(15) NOT NULL,
-  `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL,
+  `ID` varchar(20) NOT NULL,
+  `Nama` varchar(50) NOT NULL,
+  `TTL` varchar(30) NOT NULL,
+  `jenis_kelamin` varchar(20) NOT NULL,
   `alamat` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -38,33 +38,60 @@ CREATE TABLE `biodata_siswa` (
 
 LOCK TABLES `biodata_siswa` WRITE;
 /*!40000 ALTER TABLE `biodata_siswa` DISABLE KEYS */;
-INSERT INTO `biodata_siswa` VALUES (0,'Pandaya Cumsky','Jakarta, 07-02-','Laki-laki','Jl. Notaris 004/01 62A');
+INSERT INTO `biodata_siswa` VALUES ('12003','dzulll','Tokyo-17-08-1945','mechanic','shibuya'),('12022','Erlan','boyolali-23-09-2011','mechanic','wonogiri'),('12032','jordanaaaaaa','yaman-25-08-2008','mechanic','jl madinah nomor akhadasyaro, mekkah');
 /*!40000 ALTER TABLE `biodata_siswa` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `siswa`
+-- Table structure for table `pplg2`
 --
 
-DROP TABLE IF EXISTS `siswa`;
+DROP TABLE IF EXISTS `pplg2`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `siswa` (
-  `NIS` int(10) NOT NULL,
-  `nama_siswa` varchar(50) NOT NULL,
-  `kelas` varchar(20) DEFAULT NULL,
+CREATE TABLE `pplg2` (
+  `Nama_siswa` varchar(50) NOT NULL,
+  `NIS` varchar(10) NOT NULL,
+  `Tanggal_lahir` date DEFAULT NULL,
+  `Hobi` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`NIS`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `siswa`
+-- Dumping data for table `pplg2`
 --
 
-LOCK TABLES `siswa` WRITE;
-/*!40000 ALTER TABLE `siswa` DISABLE KEYS */;
-INSERT INTO `siswa` VALUES (1,'Ahnaf Rakha Rizqullah','XI PPLG 1'),(2,'Andi Rakha Arrayan','XI PPLG 2'),(3,'Arfah Putra Subandi','XI PPLG 3'),(4,'Fajar Raihan Ash-Shidiq','XI PPLG 3'),(5,'Irzi Mubarok','XI PPLG 1'),(6,'Muhammad Rizqi Fadillah','XI PPLG 1'),(7,'Pandaya Batara Galih','XI PPLG 2'),(8,'Raden Mas Asadel Hugo','XI PPLG 2'),(9,'Reza Misbach','XI PPLG 3'),(10,'Rifqi Arrafif Hakim','XI PPLG 3'),(11,'Sayyidina Alli','XI PPLG 3'),(12,'Zidane Ferdian Desta Andika','XI PPLG 1');
-/*!40000 ALTER TABLE `siswa` ENABLE KEYS */;
+LOCK TABLES `pplg2` WRITE;
+/*!40000 ALTER TABLE `pplg2` DISABLE KEYS */;
+INSERT INTO `pplg2` VALUES ('maul','10002','2001-02-02','Main_basket_bagas'),('fatur','10003','2010-02-16','ngeloco'),('Damar','10004','2009-02-17','main_mobile_legend');
+/*!40000 ALTER TABLE `pplg2` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `pplg3`
+--
+
+DROP TABLE IF EXISTS `pplg3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `pplg3` (
+  `Nama_siswa` varchar(50) NOT NULL,
+  `NIS` varchar(10) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
+  `Hobi` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`NIS`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `pplg3`
+--
+
+LOCK TABLES `pplg3` WRITE;
+/*!40000 ALTER TABLE `pplg3` DISABLE KEYS */;
+INSERT INTO `pplg3` VALUES ('rapkskuy','30001','0000-00-00','cukurukuk');
+/*!40000 ALTER TABLE `pplg3` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -76,4 +103,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2026-08-31 12:49:45
+-- Dump completed on 2026-08-31 12:53:56
